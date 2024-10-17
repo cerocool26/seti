@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "3340d2c8-8950-4135-b2d2-d2aabeceb425",
+		"name": "prueba seti",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19837941"
+	},
+	"item": [
+		{
+			"name": "create Franquicia",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"prueba2\",\r\n    \"direccion\": \"direccion prueba2\",\r\n    \"telefono\": \"3213107225\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Sucursal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idFranquicia\":1,\r\n    \"nombre\":\"sucursal Norte\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sucursal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idSucursal\" :3,\r\n    \"nombre\": \" motorola\",\r\n    \"stock\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar producto por id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar stock producto",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProducto\" :1,\r\n    \"stock\": 50\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producto/update-stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"update-stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener max product stock",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/producto/max-stock/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"max-stock",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar nombre producto",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idProducto\" :1,\r\n    \"nombre\": \"nuevo nombre play 5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/producto/update-nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"producto",
+						"update-nombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update nombre franquicia",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idFranquicia\":1,\r\n    \"nombre\": \"nuevo nombre franquicia\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/franquicia/update-nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"franquicia",
+						"update-nombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update nombre sucursal",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idSucursal\":1,\r\n    \"nombre\":\"nuevo nombre sucursal Sur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/sucursal/update-nombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"sucursal",
+						"update-nombre"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
