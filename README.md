@@ -6,3 +6,9 @@
 1. Se encuentra en la raiz del repositorio
 2. nombre : prueba seti.postman_collection.json
 
+#Dockerizacion
+1. Asegurarse que el demonio de docker este corriendo
+2. docker-compose build api_app
+3. docker-compose up
+4. probar los endpoints previamente entregados en la coleccion depostman
+
